@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A2 Distributor Nagpur</title>
+  <meta name="description" content="A2 Distributor Nagpur – Official Super Stockist of Ashwagandha Agarbatti for Vidarbha Region" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { scroll-behavior: smooth; }
+    .hero { background:#f8f9fa; padding:80px 20px; }
+    .badge-region { background:#198754; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#" id="companyName">A2 Distributor</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+        <li class="nav-item">  <a class="nav-link" href="products.html">Product Photos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="hero text-white text-center" style="background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1601600576337-c1d8a0d1373c'); background-size:cover; background-position:center; padding:120px 20px;">
+  <div class="container">
+    <h1 class="display-5 fw-bold" id="headline"></h1>
+    <p class="lead" id="tagline"></p>
+    <span class="badge bg-success mb-3" id="region"></span>
+    <div class="mt-4">
+      <a id="whatsappLink" class="btn btn-success btn-lg me-2">WhatsApp Now</a>
+      <a id="callLink" class="btn btn-outline-light btn-lg">Call Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2 class="fw-bold">About A2 Distributor</h2>
+      <p id="aboutText"></p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="https://images.unsplash.com/photo-1586521995568-39abaa0c2311" class="img-fluid rounded shadow" alt="Distribution">
+    </div>
+  </div>
+</section>
+
+<section id="services" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Distributor</h5>
+            <p class="card-text">Reliable FMCG distribution network with timely supply across Nagpur and surrounding markets.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Super Stockist</h5>
+            <p class="card-text">Official super stockist of Ashwagandha Agarbatti for the entire Vidarbha region.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Logistics Support</h5>
+            <p class="card-text">Efficient warehousing and delivery support ensuring smooth supply chain operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <h2 class="text-center fw-bold mb-4">Why Choose A2 Distributor</h2>
+  <div class="row g-4">
+    <div class="col-md-3"><div class="p-3 text-center border rounded">Trusted FMCG Partner</div></div>
+    <div class="col-md-3"><div class="p-3 text-center border rounded">Wide Market Reach</div></div>
+    <div class="col-md-3"><div class="p-3 text-center border rounded">On-Time Delivery</div></div>
+    <div class="col-md-3"><div class="p-3 text-center border rounded">Retailer Support</div></div>
+  </div>
+</section>
+
+<section id="contact" class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4 class="fw-bold">Contact A2 Distributor Nagpur</h4>
+        <p><strong>Phone:</strong> <span id="phone"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Location:</strong> Nagpur, Maharashtra</p>
+        <a id="whatsappLink" class="btn btn-success">Chat on WhatsApp</a>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://www.google.com/maps?q=Nagpur&output=embed" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-black text-white text-center py-3">
+  <p id="footerText"></p>
+</footer>
+
+<script>
+fetch('data/content.json')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('companyName').textContent = data.companyName;
+    document.getElementById('headline').textContent = data.headline;
+    document.getElementById('tagline').textContent = data.tagline;
+    document.getElementById('region').textContent = data.region;
+    document.getElementById('aboutText').textContent = data.about;
+    document.getElementById('phone').textContent = data.phone;
+    document.getElementById('email').textContent = data.email;
+    document.getElementById('footerText').textContent = data.footer;
+    document.getElementById('callLink').href = 'tel:' + data.phone;
+    document.getElementById('whatsappLink').href = 'https://wa.me/' + data.whatsapp;
+
+    const brandsUl = document.getElementById('brandsList');
+    data.brands.forEach(brand => {
+      const li = document.createElement('li');
+      li.textContent = brand;
+      brandsUl.appendChild(li);
+    });
+  });
+</script>
+
+</body>
+</html>
+
+<!-- data/content.json
+{
+  "companyName": "A2 Distributor Nagpur",
+  "headline": "Trusted FMCG Distributor",
+  "tagline": "Official Super Stockist – Ashwagandha Agarbatti",
+  "region": "Vidarbha Region (11 Districts)",
+  "about": "A2 Distributor Nagpur is a trusted FMCG distributorship supplying quality products across Nagpur and Vidarbha with reliable delivery and retailer support.",
+  "phone": "+91XXXXXXXXXX",
+  "whatsapp": "91XXXXXXXXXX",
+  "email": "info@a2distributor.in",
+  "brands": ["Ashwagandha Agarbatti", "Tikku Condimades", "Heera Sweets Pvt. Ltd."],
+  "footer": "© 2025 A2 Distributor Nagpur"
+}
+-->
